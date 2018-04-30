@@ -90,7 +90,7 @@ void captureInline2mhz() {
 #undef INLINE_NOP
 #define INLINE_NOP		__asm__("nop\n\t""rjmp 1f\n\t""1:\n\t""rjmp 2f\n\t""2:\n\t");
 
-  #include "inline_capture.inc"
+  #include "inline_capture.h"
 
 
   DEBUG_OFF; /* debug timing measurement */

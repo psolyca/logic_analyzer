@@ -90,7 +90,7 @@ void captureInline4mhz() {
 #undef INLINE_NOP
 #define INLINE_NOP		__asm__("nop\n\t");
 
-  #include "inline_capture.inc"
+  #include "inline_capture.h"
 
 
   DEBUG_OFF; /* debug timing measurement */
