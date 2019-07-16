@@ -97,16 +97,4 @@ void captureInline4mhz() {
 
   /* re-enable interrupts now that we're done sampling. */
   sei();
-
-  /*
-   * dump the samples back to the SUMP client.  nothing special
-   * is done for any triggers, this is effectively the 0/100 buffer split.
-   */
-  for (i = 0 ; i < readCount; i++) {
-#ifdef USE_PORTD
-    Serial.write(logicdata[i] >> 2);
-#else
-    Serial.write(logicdata[i]);
-#endif
-  }
 }
